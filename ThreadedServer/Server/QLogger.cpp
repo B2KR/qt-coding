@@ -62,7 +62,7 @@ namespace QLogger
 
         QLoggerWriter *logWriter = manager->getLogWriter(module);
 
-        if (logWriter and logWriter->getLevel() >= level)
+        if (logWriter and logWriter->getLevel() <= level)
                 logWriter->write(module,message);
     }
 
